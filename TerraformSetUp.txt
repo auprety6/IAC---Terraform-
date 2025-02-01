@@ -1,0 +1,57 @@
+1.Access Key Retrieved through user settings on the AWS IAM section of the management console. 
+
+"yourkey"
+
+
+2. Secret Access Key Retrieved through user settings on the AWS IAM section of the management console.
+
+"yourkey"
+
+
+
+
+3. C:\Users\oakto\OneDrive\Documents\TerraForm\main.tf  # this is the main configuration for terraform which defines your AWS settings and picks the exact AWS Region you want to locate to. I created this file after downloading terraform extension to my vscode. 
+
+
+4
+#set up AWS CLI  your local windows machine 
+
+a) run the command C:\> "msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi" then follow installation steps. direct it to a path you are comfortable with managing either on your Linux terminal, windows or mac machine. 
+
+B) 
+Microsoft Windows [Version 10.0.22631.4751]
+(c) Microsoft Corporation. All rights reserved.
+
+Run Command in quotations below 
+C:\Users\oakto> "aws --version"
+
+D)
+Recieving the output below 
+aws-cli/2.23.11 Python/3.12.6 Windows/11 exe/AMD64
+
+ #Changing directories
+C:\Users\oakto>cd ..
+
+C:\Users>cd ..
+
+#retesting
+C:\>aws --version
+aws-cli/2.23.11 Python/3.12.6 Windows/11 exe/AMD64
+
+you will be prompted to enter what you configured on the IaM polices within the console below
+C:\> aws configure                                                             #this is the command we want to run after we`ve ensured AWS CLI has been installed
+AWS Access Key ID [None]: ""                                #this key is derived from AWS IAM keys ( you must create this manually on the console) 
+AWS Secret Access Key [None]: ""         # this key is derived from IAM keys ( you must create this manually on the console) 
+Default region name [None]: us-east-1
+Default output format [None]:                                                  # leave this one as "JSON" on MaC and Linux and blank on windows. 
+
+C:\>
+
+5)
+on your coding platform of choice - mine being vscode open up a test terminal and run where your main.tf file is located
+
+1) " terraform plan"
+- you should be shown the full details and choice of the terraform environment 
+
+2) " terraform init"
+- initialize terraform and its full capabilities. 
