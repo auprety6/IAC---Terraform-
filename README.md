@@ -1,1 +1,1 @@
-Create a virtual private cloud, lambdas, ques and triggers and Ec2s on the AWS console using Terraform HCL language instead of laborious manual creations. We love a good automation ;)
+Set Up Terraform in VSCode and run the initial blocks to create an AWS enviornment
